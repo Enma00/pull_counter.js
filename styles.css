@@ -1,0 +1,22 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0.2rem;
+}
+
+#count {
+    font-size: 24px;
+    margin: 10px;
+}
+
+#last-5-counts {
+    font-size: 12px;
+    margin-top: 20px;
+}
