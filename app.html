@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <title>Pull counter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,7 +16,13 @@
 <button onclick="reset()">Reset</button>
 <div id="last-5-counts"></div>
 
-<script src="main.js"></script>
+
+
 
 </body>
+<footer>
+    <button id="toggle-dark-mode">Active/désactive le  Dark Mode</button>
+    <p>Source actuelle du thème: <strong id="theme-source">System</strong></p>
+</footer>
+<script src="renderer.js"></script>
 </html>
