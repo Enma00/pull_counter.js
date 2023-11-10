@@ -9,11 +9,11 @@
 </head>
 <body>
 
-<button onclick="add()">Add or press '+'</button>
-<button onclick="substract()">substract or press '-'</button>
+<button id="add">Add or press '+'</button>
+<button id="substract">substract or press '-'</button>
 
 <div id="count">Count: 0</div>
-<button onclick="reset()">Reset</button>
+<button id="reset">Reset</button>
 <div id="last-5-counts"></div>
 
 
@@ -21,8 +21,10 @@
 
 </body>
 <footer>
-    <button id="toggle-dark-mode">Active/désactive le  Dark Mode</button>
-    <p>Source actuelle du thème: <strong id="theme-source">System</strong></p>
+    <div id="footer">
+        <button id="toggle-dark-mode">Active/désactive le  Dark Mode</button>
+        <p>Source actuelle du thème: <strong id="theme-source">Dark</strong></p>
+    </div>
 </footer>
 <script src="renderer.js"></script>
 </html>

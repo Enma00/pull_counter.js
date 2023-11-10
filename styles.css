@@ -27,3 +27,8 @@ button {
     font-size: 12px;
     margin-top: 20px;
 }
+
+#footer {
+    display: flex;
+    justify-content: center;
+}

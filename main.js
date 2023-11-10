@@ -12,6 +12,7 @@ const win = new BrowserWindow({
 
 win.loadFile('app.html')
 
+/* -------------------------------- Dark Mode ------------------------------- */
 ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
         nativeTheme.themeSource = 'light'
@@ -38,3 +39,15 @@ app.on('window-all-closed', () => {
 }
 })
 
+/* ------------------------------ Bouton + / - ------------------------------ */
+let countValue = 0;
+
+ipcMain.handle('operation:add', () => {
+    countValue += 1;
+    return countValue;
+});
+
+ipcMain.handle('operation:subtract', () => {
+    countValue -= 1;
+    return countValue;
+});
