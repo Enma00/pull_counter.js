@@ -29,7 +29,6 @@ ipcMain.handle('operation:reset', (event, name_save) => {
     return countValue;
 });
 
-
 ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
         nativeTheme.themeSource = 'light';
@@ -66,3 +65,5 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 });
+
+
