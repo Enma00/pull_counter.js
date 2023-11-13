@@ -14,10 +14,21 @@ ipcMain.handle('operation:subtract', () => {
     return countValue;
 });
 
-ipcMain.handle('operation:reset', () => {
+ipcMain.handle('operation:reset', (event, name_save) => {
+    let existingData;
+    try {
+        const rawData = fs.readFileSync('data.json');
+        existingData = JSON.parse(rawData);
+    } catch (error) {
+        existingData = [];
+    }
+    const newData = `${name_save}: ${countValue}`;
+    existingData.push(newData);
+    fs.writeFileSync('data.json', JSON.stringify(existingData, null, 2));
     countValue = 0;
     return countValue;
 });
+
 
 ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {

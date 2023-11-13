@@ -1,6 +1,8 @@
 document.getElementById("reset").addEventListener('click', async () => {
-    const result = await window.operations.reset();
+    const name_save = document.getElementById("name_save").value;
+    const result = await window.operations.reset(name_save);
     document.getElementById("count").innerText = `Count: ${result}`;
+    document.getElementById("name_save").value = "";
 });
 
 document.getElementById("add").addEventListener('click', async () => {
