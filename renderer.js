@@ -33,3 +33,14 @@ async function updateLast5Counts() {
     }
 }
 window.addEventListener('DOMContentLoaded', updateLast5Counts);
+
+document.addEventListener('keydown', async (event) => {
+    if (event.key === 'Enter') {
+        document.getElementById("reset").click();
+    } else if (event.key === '+') {
+        document.getElementById("add").click();
+    } else if (event.key === '-') {
+        document.getElementById("subtract").click();
+    }
+});
+
