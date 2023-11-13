@@ -1,2 +1,7 @@
+# Node.js
+node_modules/
 
+# Fichiers de log
+npm-debug.log
+yarn-error.log
 node_modules/wrappy/README.md
