@@ -1,8 +1,9 @@
-const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron');
+const { app, BrowserWindow, ipcMain, nativeTheme} = require('electron');
 const path = require('node:path');
 const fs = require('fs');
 
 let countValue = 0;
+let secondtab;
 
 ipcMain.handle('operation:add', () => {
     countValue += 1;
